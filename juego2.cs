@@ -10,7 +10,7 @@ class Program
         while (jugarDeNuevo)
         {
             Console.Clear();
-            Console.WriteLine("🎮 ¡BIENVENIDO AL JUEGO DE ADIVINAR EL NÚMERO - VERSIÓN 2! 🎮");
+            Console.WriteLine("¡BIENVENIDO AL JUEGO DE ADIVINAR EL NÚMERO - VERSIÓN 2!");
             Console.WriteLine("=============================================================");
             
             // Solicitar número máximo con validación
@@ -55,11 +55,11 @@ class Program
                     // Dar pista
                     if (numeroUsuario < numeroSecreto)
                     {
-                        Console.WriteLine("❌ El número secreto es MAYOR");
+                        Console.WriteLine("El número secreto es MAYOR");
                     }
                     else
                     {
-                        Console.WriteLine("❌ El número secreto es MENOR");
+                        Console.WriteLine("El número secreto es MENOR");
                     }
                     
                     // Mostrar intentos anteriores
@@ -77,7 +77,7 @@ class Program
             jugarDeNuevo = PreguntarJugarDeNuevo();
         }
         
-        Console.WriteLine("\n¡Gracias por jugar! 👋");
+        Console.WriteLine("\n¡Gracias por jugar!");
     }
     
     static int SolicitarNumeroMaximo()
@@ -97,7 +97,7 @@ class Program
                 return numero;
             }
             
-            Console.WriteLine("❌ Error: Debe ser un número entero mayor que 0. Intenta de nuevo.");
+            Console.WriteLine("Error: Debe ser un número entero mayor que 0. Intenta de nuevo.");
         }
     }
     
@@ -124,7 +124,7 @@ class Program
                 case "2": return 5;
                 case "3": return 3;
                 default:
-                    Console.WriteLine("❌ Error: Opción no válida. Elige 1, 2, 3 o 'S' para salir.");
+                    Console.WriteLine("Error: Opción no válida. Elige 1, 2, 3 o 'S' para salir.");
                     break;
             }
         }
@@ -150,12 +150,12 @@ class Program
                 }
                 else
                 {
-                    Console.WriteLine($"❌ Error: El número debe estar entre 0 y {numeroMaximo}.");
+                    Console.WriteLine($"Error: El número debe estar entre 0 y {numeroMaximo}.");
                 }
             }
             else
             {
-                Console.WriteLine("❌ Error: Debe ser un número válido o 'S' para salir.");
+                Console.WriteLine("Error: Debe ser un número válido o 'S' para salir.");
             }
         }
     }
@@ -166,16 +166,16 @@ class Program
         
         if (haGanado)
         {
-            Console.WriteLine("🎉 ¡FELICIDADES! ¡HAS GANADO! 🎉");
+            Console.WriteLine("¡FELICIDADES! ¡HAS GANADO!");
         }
         else
         {
-            Console.WriteLine("💀 ¡LO SIENTO! HAS PERDIDO 💀");
+            Console.WriteLine("¡LO SIENTO! HAS PERDIDO ");
         }
         
-        Console.WriteLine($"🔢 El número secreto era: {numeroSecreto}");
-        Console.WriteLine($"📊 Tus intentos: {string.Join(" → ", intentos)}");
-        Console.WriteLine($"🎯 Total de intentos: {intentos.Count}");
+        Console.WriteLine($"El número secreto era: {numeroSecreto}");
+        Console.WriteLine($"Tus intentos: {string.Join(" → ", intentos)}");
+        Console.WriteLine($"Total de intentos: {intentos.Count}");
         
         Console.WriteLine(new string('=', 40));
     }
@@ -190,7 +190,7 @@ class Program
             if (respuesta == "S") return true;
             if (respuesta == "N") return false;
             
-            Console.WriteLine("❌ Error: Responde 'S' para Sí o 'N' para No");
+            Console.WriteLine("Error: Responde 'S' para Sí o 'N' para No");
         }
     }
 }
